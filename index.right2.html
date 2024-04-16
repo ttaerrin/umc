@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>모달</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>
+        안녕하세요!
+    </h1>
+    <p>내용내용내용</p>
+    <button id="modalbtn">버튼 열기</button>
+
+    <div id="modal" style="display: none">
+        <div id="modal_window">
+            <p>안녕하세요</p>
+            <p>모달 내용 </p>
+            <div id="btn_cover">
+                <button id="modal_close_btn">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#modalbtn").addEventListener('click', () => {
+            let modal = document.querySelector("#modal");
+            modal.style.display = 'flex';
+        })
+
+        document.querySelector("#modal_close_btn").addEventListener('click', () => {
+            let modal = document.querySelector("#modal");
+            modal.style.display = 'none';
+        })
+    </script>
+</body>
+
+</html>
