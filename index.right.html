@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>카운터</title>
+    </head>
+    <body>
+        <h1 id="number">0</h1>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+
+        <script>
+            number = document.querySelector("#number");
+            increaseBtn = document.querySelector("#increase");
+            decreaseBtn = document.querySelector("#decrease");
+
+            console.log(number);
+            console.log(increaseBtn);
+            console.log(decreaseBtn);
+
+            increaseBtn.addEventListener('click', () => {
+                let value = Number.parseInt(number.innerText) + 1;
+                number.innerText = value;
+            })
+            decreaseBtn.addEventListener('click', () => {
+                let value = Number.parseInt(number.innerText) - 1;
+                number.innerText = value;
+            })
+        </script>
+    </body>
+</html>
